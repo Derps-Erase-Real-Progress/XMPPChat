@@ -1,0 +1,32 @@
+name: XMPPchat
+main: net.sourceforge.duonoxsol.xmppchat.XMPPchat
+version: 0.1
+author: DuoNoxSol
+commands:
+    xmpp:
+        description: Manages the XMPP chatroom
+        usage: /<command> [start, stop]
+        aliases: irc
+        permission: <plugin name>.xmpp.administrate
+        permission-message: You don't have <permission>
+    xmpp connect:
+        description: Joins an XMPP conference
+        usage: /<command> [conference]
+        permission: <plugin name>.xmpp.administrate
+    xmpp disconnect:
+        description: Leaves the current XMPP conference
+        usage: /<command>
+        
+    
+permissions:
+    xmpp.*:
+        description: Allows full control over the chatroom
+        children:
+            xmpp.administrate: true
+            xmpp.interaction: true
+    xmpp.administrate:
+        description: Allows administrative control over the chatroom
+        default: op
+    xmpp.interaction:
+        description: Allows normal access to the chatroom
+        default: true
