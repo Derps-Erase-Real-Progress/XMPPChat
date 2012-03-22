@@ -1,2 +1,9 @@
+#FOR COMPILE, REQUIRES:
+#bukkit-1.2.3-RO.1.jar (or more recent)
+#smack.jar
+#smackx.jar
+
 	Minecraft XMPP chat client for servers using the Bukkit server 
 wrapper.
+
+

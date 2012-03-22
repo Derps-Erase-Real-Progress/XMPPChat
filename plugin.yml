@@ -1,5 +1,5 @@
 name: XMPPchat
-main: net.sourceforge.duonoxsol.xmppchat.XMPPchat
+main: com.github.sashacrofter.XMPPChat.XMPPchat
 version: 0.1
 author: DuoNoxSol
 commands:

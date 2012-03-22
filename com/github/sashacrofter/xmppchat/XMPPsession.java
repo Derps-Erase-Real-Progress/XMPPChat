@@ -35,14 +35,11 @@ public class XMPPsession
 		this.sessionParameters.put("chatroom", chatroom);
 		this.sessionParameters.put("server", conferenceServer);
 		
-		
-		
 		try
 		{
-			connection = new XMPPConnection("conference.vegasix.servegame.com");
-			//connection.connect("conference.vegasix.servegame.com");
-			connection.login(username, password);
+			connection = new XMPPConnection("conference.jabber.org");
 			connection.connect();
+			connection.login(username, password);
 		} catch (Exception e) { xmppchat.log(2, "error at XMPPConnection"); e.printStackTrace(); }
 	}
 	
@@ -66,21 +63,4 @@ public class XMPPsession
 	{
 		return "";
 	}
-	
-	/*
-	private Class<XMPPConnection> getClassConnection() //TODO is not loading or returning class
-	{
-		try {
-			@SuppressWarnings("unchecked")
-			Class<XMPPConnection> loadClass = (Class<XMPPConnection>) ClassLoader.getSystemClassLoader().
-					loadClass("org.jivesoftware.smack.XMPPConnection");
-			return loadClass;
-		} catch (ClassNotFoundException e)
-		{
-			xmppchat.log(2, "XMPPChat FATAL ERROR");
-			e.printStackTrace();
-		}
-		return null;
-	}
-	*/
 }
